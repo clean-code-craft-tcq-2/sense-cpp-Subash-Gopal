@@ -33,5 +33,6 @@ class StatsAlerter
             objAlert.emailAlert.emailSent = false;
             objAlert.ledAlert.ledGlows = false;
         }
+        return objAlert;
     }
 };
