@@ -1,4 +1,5 @@
 #include <vector>
+#include <bits/stdc++.h>
 
 namespace Statistics {
     struct Stats{
