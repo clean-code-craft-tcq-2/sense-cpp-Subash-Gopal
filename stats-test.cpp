@@ -14,7 +14,7 @@ double Average(const std::vector<double>& input) {
     
     
 //     computedStats.average = 4.5;
-   return accumulate(input.begin(), input.end(), 0) / input.size() ;
+   return accumulate(input.begin(), input.end(), 0.0l) / input.size() ;
     
 }
 TEST_CASE( "Factorial of 0 is 1 (fail)", "[single-file]" ) {
