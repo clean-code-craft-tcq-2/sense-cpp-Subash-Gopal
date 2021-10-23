@@ -13,13 +13,13 @@ namespace Statistics {
 class StatsAlerter
 {
     float maximumThreshold;
-    //int x;
-    //int y;
+    int &x;
+    int &y;
     public:
     statsAlerter(const float maxThreshold, const std::vector<IAlerter>& input_vector){
         maximumThreshold = maxThreshold;
-        //int x =input_vector[0];
-        //int y =input_vector[1];
+        x =input_vector[0];
+        y =input_vector[1];
         
     }
     IAlerter checkAndAlert(const std::vector<double>& input_vector){
@@ -27,7 +27,7 @@ class StatsAlerter
         float max = *(std::max_element(input_vector.begin(), input_vector.end()));
         if(max > maximumThreshold){
             objAlert.emailAlert.emailSent = true;
-            objAlert.ledAlert.ledGlows = true;
+            objAlert.ledAlert.ledGlows = true;            
         }
         else{
             objAlert.emailAlert.emailSent = false;
