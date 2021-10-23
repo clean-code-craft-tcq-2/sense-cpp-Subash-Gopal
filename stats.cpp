@@ -22,18 +22,16 @@ class StatsAlerter
         //int y =input_vector[1];
         
     }
-    std::vector<IAlerter>checkAndAlert(const std::vector<double>& input_vector){
+    void checkAndAlert(const std::vector<double>& input_vector){
         IAlerter objAlert;
         float max = *(std::max_element(input_vector.begin(), input_vector.end()));
         if(max > maximumThreshold){
             objAlert.emailAlert.emailSent = true;
             objAlert.ledAlert.ledGlows = true;
-            return true;
         }
         else{
             objAlert.emailAlert.emailSent = false;
             objAlert.ledAlert.ledGlows = false;
-            return true;
         }
     }
 };
