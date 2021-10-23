@@ -29,7 +29,7 @@ TEST_CASE( "Factorials of 1 and higher are computed (pass)", "[single-file]" ) {
 
 TEST_CASE( "Average of a vector test cases" ) {
    float epsilon = 0.001;
-   REQUIRE(std::abs(Average({1.5, 8.9, 3.2, 4.5}) - 4.525) < epsilon));
+   REQUIRE(std::abs(Average({1.5, 8.9, 3.2, 4.5}) - 4.525) < epsilon);
 }
 
 TEST_CASE("reports average, minimum and maximum") {
