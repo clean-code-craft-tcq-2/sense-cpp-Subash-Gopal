@@ -28,10 +28,12 @@ class StatsAlerter
         if(max > maximumThreshold){
             objAlert.emailAlert.emailSent = true;
             objAlert.ledAlert.ledGlows = true;
+            return true;
         }
         else{
             objAlert.emailAlert.emailSent = false;
             objAlert.ledAlert.ledGlows = false;
+            return true;
         }
     }
 };
