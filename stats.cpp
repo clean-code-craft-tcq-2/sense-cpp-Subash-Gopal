@@ -1,5 +1,5 @@
 #include "stats.h"
-using namespace std;
+
 namespace Statistics {    
     Stats ComputeStatistics(const std::vector<double>& input_vector ) {
         Stats compute;
