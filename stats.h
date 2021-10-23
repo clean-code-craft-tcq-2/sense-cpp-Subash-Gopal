@@ -7,7 +7,10 @@ namespace Statistics {
         double min;
         double average;        
     };
-    struct EmailAlert 
+    Stats ComputeStatistics(const std::vector<double>& input);
+}
+
+struct EmailAlert 
 	{
 		bool emailSent;
 	};
@@ -20,5 +23,3 @@ namespace Statistics {
 		EmailAlert emailAlert;
 		LEDAlert ledAlert;
 	};
-    Stats ComputeStatistics(const std::vector<double>& input);
-}
