@@ -19,7 +19,7 @@ class StatsAlerter
     //int &x;
    // int &y;
     public:
-    StatsAlerter(const float maxThreshold, const std::vector<IAlerter>& input_vector){
+    void statsAlerter(const float maxThreshold, const std::vector<IAlerter>& input_vector){
         maximumThreshold = maxThreshold;
         //x =input_vector[0];
         //y =input_vector[1];
