@@ -10,6 +10,9 @@ namespace Statistics {
     }
 }
 
+
+
+namespace Threshold {  
 class StatsAlerter
 {
     float maximumThreshold;
@@ -36,3 +39,4 @@ class StatsAlerter
         return objAlert;
     }
 };
+}
