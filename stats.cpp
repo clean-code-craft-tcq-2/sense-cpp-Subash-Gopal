@@ -14,7 +14,7 @@ class StatsAlerter
    int maximumThreshold;
     int *address0,*address1;
     public:
-    StatsAlerter(int maxThreshold,const std::vector<IAlerter*>& alerters)
+    StatsAlerter(const float maxThreshold,const std::vector<IAlerter*>& alerters)
     { 
         maximumThreshold = maxThreshold;
         address0 = alerters[0];
