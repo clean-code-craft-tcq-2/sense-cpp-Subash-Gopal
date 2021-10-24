@@ -11,15 +11,15 @@ namespace Statistics {
 }
 
 struct EmailAlert{
-  bool emailSent;
-	};
+	  bool emailSent;
+};
 struct LEDAlert{
-		bool ledGlows;
-	};
+	  bool ledGlows;
+};
 struct IAlerter{
 		EmailAlert* emailAlert;
 		LEDAlert* ledAlert;
-	};
+};
 
 class StatsAlerter
 {
