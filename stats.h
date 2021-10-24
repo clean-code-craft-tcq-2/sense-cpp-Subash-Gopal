@@ -10,16 +10,13 @@ namespace Statistics {
     Stats ComputeStatistics(const std::vector<double>& input);
 }
 
-struct EmailAlert 
-	{
-		bool emailSent;
+struct EmailAlert{
+  bool emailSent;
 	};
-	struct LEDAlert 
-	{
+struct LEDAlert{
 		bool ledGlows;
 	};
-    struct IAlerter
-	{
+struct IAlerter{
 		EmailAlert* emailAlert;
 		LEDAlert* ledAlert;
 	};
@@ -45,6 +42,5 @@ class StatsAlerter
             *address0->emailAlert = {false};
             *address0->ledAlert = {false};
         }
-    }
-    
+    }    
 };
