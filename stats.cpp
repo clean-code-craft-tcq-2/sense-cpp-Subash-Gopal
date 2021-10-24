@@ -9,33 +9,29 @@ namespace Statistics {
         return compute;
     }
 }
-
-
-
-
 class StatsAlerter
 {
-    float maximumThreshold;
-    //int &x;
-   // int &y;
+   int maximumThreshold;
+    int *address0,*address1;
     public:
-    void statsAlerter(const float maxThreshold, const std::vector<IAlerter>& input_vector){
+    StatsAlerter(int maxThreshold,const std::vector<IAlerter*>& alerters)
+    { 
         maximumThreshold = maxThreshold;
-        //x =input_vector[0];
-        //y =input_vector[1];
-        
+        address0 = alerters[0];
+        address1 = alerters[1];
     }
-    IAlerter checkAndAlert(const std::vector<double>& input_vector){
+    void checkAndAlert(const std::vector<double>& input_vector)
+    {
         IAlerter objAlert;
-        float max = *(std::max_element(input_vector.begin(), input_vector.end()));
+        double max = *(std::max_element(input_vector.begin(), input_vector.end()));
         if(max > maximumThreshold){
-            objAlert.emailAlert.emailSent = true;
-            objAlert.ledAlert.ledGlows = true;            
+             *address0 = {true};
+             *address1 = {true};
         }
         else{
-            objAlert.emailAlert.emailSent = false;
-            objAlert.ledAlert.ledGlows = false;
+            *address0 = {false};
+            *address1 = {false};
         }
-        return objAlert;
     }
+    
 };
