@@ -11,7 +11,7 @@ namespace Statistics {
 }
 class StatsAlerter
 {
-   const float maximumThreshold;
+    float maximumThreshold;
     IAlerter *address0,*address1;
     public:
     StatsAlerter(const float maxThreshold,const std::vector<IAlerter*>& alerters)
