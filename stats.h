@@ -20,6 +20,6 @@ struct EmailAlert
 	};
     struct IAlerter
 	{
-		EmailAlert emailAlert;
-		LEDAlert ledAlert;
+		EmailAlert* emailAlert;
+		LEDAler* ledAlert;
 	};
