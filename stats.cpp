@@ -21,7 +21,6 @@ class StatsAlerter
     }
     void checkAndAlert(const std::vector<double>& input_vector)
     {
-        IAlerter objAlert;
         double max = *(std::max_element(input_vector.begin(), input_vector.end()));
         if(max > maximumThreshold){
              *address0->emailAlert = {true};
